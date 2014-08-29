@@ -29,12 +29,14 @@ def get_db_rows(db_xlsx_filename):
 def export_to_taplister(beers):
   """Export the ``beers`` to taplister."""
   # TODO: implement
+  # only export items with a tap number
   pass
 
 
 def export_to_text(beers, text_filename):
   """Export the ``beers`` to a text file."""
   # TODO: implement
+  # only export items with a tap number
   pass
 
 
