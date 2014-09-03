@@ -20,6 +20,7 @@ def get_db_rows(db_xlsx_filename):
     values = [value for value in db_worksheet.row_values(row_index)]
     values = values[:column_count]
     # Skip rows that have no values
+    # only get rows that have a tap number listed?
     if not len(filter(None, values)):
       continue
     rows.append(dict(zip(column_names, values)))
@@ -45,7 +46,8 @@ def main(args):
   for beer in beers:
     name = beer['NAME']
     price = beer['PRICE']
-    print name, price
+    desc = beer['DESCRIPTION']
+    print name, desc, price
 
 
 def process_args():
